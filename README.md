@@ -35,8 +35,8 @@ See the [ZMK documentation](https://zmk.dev/docs/development/setup) for local se
 3. The board will appear as a USB storage device named `NICENANO`
 
 4. **Copy the correct `.uf2` file** to the `NICENANO` drive:
-   - `lily58_left-nice_nano_v2-zmk.uf2` for the **left** half
-   - `lily58_right-nice_nano_v2-zmk.uf2` for the **right** half
+   - `lily58_left nice_view_adapter nice_view_gem-nice_nano_v2-zmk.uf2` for the **left** half
+   - `lily58_right nice_view_adapter nice_view_gem-nice_nano_v2-zmk.uf2` for the **right** half
 
 5. The board will automatically restart after copying
 
