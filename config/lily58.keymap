@@ -41,10 +41,10 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &kp PRINTSCREEN  &trans    &trans       &trans         &trans     &trans
-&trans      &trans        &trans        &trans        &trans        &trans                        &trans           &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &trans
-&trans      &trans        &trans        &trans        &trans        &trans                        &trans           &kp LEFT  &kp UP       &kp DOWN       &kp RIGHT  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &none    &none  &trans           &trans    &trans       &trans         &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &kp PRINTSCREEN  &trans    &trans         &trans       &trans     &trans
+&trans      &trans        &trans        &trans        &trans        &trans                        &trans           &trans    &trans         &trans       &trans     &trans
+&trans      &trans        &trans        &trans        &trans        &trans                        &trans           &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &none    &none  &trans           &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
                                         &kp LGUI      &trans        &kp SPACE     &none    &none  &kp RET          &trans    &kp RALT
             >;
         };
