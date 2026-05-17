@@ -41,11 +41,11 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                   &kp PRINTSCREEN  &trans    &trans    &trans     &trans  &bt BT_CLR
-&trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                  &trans           &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans         &trans         &trans         &trans         &trans                         &trans           &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans         &trans         &trans         &trans         &trans         &none    &none  &trans           &trans    &trans    &trans     &trans  &trans
-                                      &kp LGUI       &trans         &kp SPACE      &none    &none  &kp RET          &trans    &kp RALT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &kp PRINTSCREEN  &trans    &trans       &trans         &trans     &trans
+&trans      &trans        &trans        &trans        &trans        &trans                        &trans           &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &trans
+&trans      &trans        &trans        &trans        &trans        &trans                        &trans           &kp LEFT  &kp UP       &kp DOWN       &kp RIGHT  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &none    &none  &trans           &trans    &trans       &trans         &trans     &trans
+                                        &kp LGUI      &trans        &kp SPACE     &none    &none  &kp RET          &trans    &kp RALT
             >;
         };
 
@@ -59,11 +59,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans    &trans  &trans                     &trans   &trans     &trans     &trans            &trans             &trans
-&trans  &trans  &trans  &trans    &trans  &trans                     &trans   &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
-&trans  &trans  &trans  &trans    &trans  &trans                     &trans   &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
-&trans  &trans  &trans  &trans    &trans  &trans     &none    &none  &trans   &trans     &trans     &trans            &trans             &trans
-                        &kp LGUI  &trans  &kp SPACE  &none    &none  &kp RET  &trans     &kp RALT
+&trans  &trans  &trans  &trans    &trans  &trans                     &kp PRINTSCREEN  &trans     &trans     &trans            &trans             &trans
+&trans  &trans  &trans  &trans    &trans  &trans                     &trans           &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
+&trans  &trans  &trans  &trans    &trans  &trans                     &trans           &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
+&trans  &trans  &trans  &trans    &trans  &trans     &none    &none  &trans           &trans     &trans     &trans            &trans             &trans
+                        &kp LGUI  &trans  &kp SPACE  &none    &none  &kp RET          &trans     &kp RALT
             >;
         };
 
