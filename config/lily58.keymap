@@ -52,17 +52,17 @@
         raise_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   | PSCRN|       |       |      |       |       |
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |       |     |     |      |      |      |                   |      |   -   |   =   |  [   |   ]   |   `   |
-            // |       |     |     |      |      |      |  n/a   |  |  n/a  |      |   _   |   +   |  {   |   }   |   ~   |
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |   `   |
+            // |       |     |     |      |      |      |                   |      |   -   |   =   |  [   |   ]   |   ~   |
+            // |       |     |     |      |      |      |  n/a   |  |  n/a  |      |   _   |   +   |  {   |   }   |       |
             //                     | GUI  |      | SPACE|  n/a   |  |  n/a  | ENTER|       |  ALT  |
 
             display-name = "Raise";
             bindings = <
 &trans  &trans  &trans  &trans    &trans  &trans                     &kp PRINTSCREEN  &trans     &trans     &trans            &trans             &trans
-&trans  &trans  &trans  &trans    &trans  &trans                     &trans           &trans     &trans     &trans            &trans             &trans
-&trans  &trans  &trans  &trans    &trans  &trans                     &trans           &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
-&trans  &trans  &trans  &trans    &trans  &trans     &none    &none  &trans           &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
+&trans  &trans  &trans  &trans    &trans  &trans                     &trans           &trans     &trans     &trans            &trans             &kp GRAVE
+&trans  &trans  &trans  &trans    &trans  &trans                     &trans           &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
+&trans  &trans  &trans  &trans    &trans  &trans     &none    &none  &trans           &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans
                         &kp LGUI  &trans  &kp SPACE  &none    &none  &kp RET          &trans     &kp RALT
             >;
         };
