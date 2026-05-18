@@ -1,8 +1,12 @@
-name: Sync layer diagrams
+name: Sync keymap-derived files
 
-# Regenerate the ASCII layer-diagram comments in config/lily58.keymap whenever
-# the bindings change. The nickcoutsos keymap-editor only edits the bindings
-# block, so the human-readable diagram drifts out of sync over time.
+# Regenerate files derived from config/lily58.keymap whenever the bindings
+# change:
+#   1. ASCII layer-diagram comments inside the keymap itself
+#   2. reference/keymap-reference.html (the printable cheat sheet)
+#
+# The nickcoutsos keymap-editor only edits the bindings block, so both of
+# these need to be regenerated automatically to stay in sync.
 #
 # Loop safety: commits made with the default GITHUB_TOKEN do NOT trigger other
 # workflow runs, so the auto-sync commit will not re-fire this workflow.
@@ -13,6 +17,7 @@ on:
     paths:
       - 'config/lily58.keymap'
       - '.github/scripts/sync_layer_diagrams.py'
+      - '.github/scripts/render_keymap_reference.py'
   workflow_dispatch:
 
 permissions:
@@ -28,17 +33,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Regenerate layer diagrams
+      - name: Regenerate ASCII layer diagrams
         run: python .github/scripts/sync_layer_diagrams.py config/lily58.keymap
+
+      - name: Regenerate printable keymap reference
+        run: python .github/scripts/render_keymap_reference.py config/lily58.keymap
 
       - name: Commit and push if changed
         run: |
-          if [[ -z "$(git status --porcelain config/lily58.keymap)" ]]; then
-            echo "Diagrams already in sync."
+          TARGETS="config/lily58.keymap reference/keymap-reference.html"
+          if [[ -z "$(git status --porcelain $TARGETS)" ]]; then
+            echo "Keymap-derived files already in sync."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add config/lily58.keymap
-          git commit -m "chore: sync layer diagrams with bindings"
+          git add $TARGETS
+          git commit -m "chore: sync keymap-derived files with bindings"
           git push

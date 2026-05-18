@@ -113,18 +113,44 @@ All Bluetooth controls are on the **Lower layer** (hold the middle left thumb ke
 2. Remove the keyboard from your device's Bluetooth settings
 3. Re-pair by selecting the profile again
 
+## Printable Keymap Reference
+
+A printable cheat sheet visualizing all three layers in keycap style (Base
+centered, Lower in the bottom-left, Raise in the top-right) lives at
+[reference/keymap-reference.html](reference/keymap-reference.html).
+
+Open it in a browser and press **Ctrl+P → Save as PDF** to get a printable
+PDF. The page is laid out for **Letter landscape**.
+
+The HTML is auto-generated from `config/lily58.keymap` by
+`.github/scripts/render_keymap_reference.py`. The `Sync keymap-derived files`
+GitHub Actions workflow regenerates it on every push to `main`, so it stays
+in sync even when the keymap is edited via the keymap-editor web tool.
+
+To regenerate locally after editing the keymap:
+
+```
+python .github/scripts/render_keymap_reference.py config/lily58.keymap
+```
+
 ## Files
 
 ```
 silakka54-zmk-config/
 ├── config/
-│   ├── lily58.keymap    # Keymap configuration (54 keys, 4 as &none)
-│   ├── lily58.conf      # Firmware settings
-│   └── west.yml         # ZMK dependencies
-├── build.yaml           # Build matrix
+│   ├── lily58.keymap                 # Keymap configuration (54 keys, 4 as &none)
+│   ├── lily58.conf                   # Firmware settings
+│   └── west.yml                      # ZMK dependencies
+├── reference/
+│   └── keymap-reference.html         # Printable cheat sheet (auto-generated)
+├── build.yaml                        # Build matrix
 └── .github/
+    ├── scripts/
+    │   ├── sync_layer_diagrams.py    # Regenerates ASCII diagrams in keymap
+    │   └── render_keymap_reference.py # Regenerates the cheat sheet HTML
     └── workflows/
-        └── build.yml    # GitHub Actions workflow
+        ├── build.yml                 # Firmware build
+        └── sync-layer-diagrams.yml   # Auto-regenerate derived files on push
 ```
 
 ## Links
