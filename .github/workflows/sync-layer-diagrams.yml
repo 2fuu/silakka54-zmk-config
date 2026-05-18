@@ -1,0 +1,44 @@
+name: Sync layer diagrams
+
+# Regenerate the ASCII layer-diagram comments in config/lily58.keymap whenever
+# the bindings change. The nickcoutsos keymap-editor only edits the bindings
+# block, so the human-readable diagram drifts out of sync over time.
+#
+# Loop safety: commits made with the default GITHUB_TOKEN do NOT trigger other
+# workflow runs, so the auto-sync commit will not re-fire this workflow.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/lily58.keymap'
+      - '.github/scripts/sync_layer_diagrams.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Regenerate layer diagrams
+        run: python .github/scripts/sync_layer_diagrams.py config/lily58.keymap
+
+      - name: Commit and push if changed
+        run: |
+          if [[ -z "$(git status --porcelain config/lily58.keymap)" ]]; then
+            echo "Diagrams already in sync."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/lily58.keymap
+          git commit -m "chore: sync layer diagrams with bindings"
+          git push

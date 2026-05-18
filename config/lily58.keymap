@@ -14,11 +14,11 @@
 
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BSPC  |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  n/a   |  |  n/a  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | LOWER| SPACE|  n/a   |  |  n/a  | ENTER| RAISE |  WIN  |
+            // |  ESC  |   1   |   2   |   3   |   4   |   5   |                   |   6   |   7   |   8   |   9   |   0   | BSPC  |
+            // |  TAB  |   Q   |   W   |   E   |   R   |   T   |                   |   Y   |   U   |   I   |   O   |   P   |   \   |
+            // | CTRL  |   A   |   S   |   D   |   F   |   G   |                   |   H   |   J   |   K   |   L   |   ;   |   '   |
+            // | SHIFT |   Z   |   X   |   C   |   V   |   B   |  n/a   |  |  n/a  |   N   |   M   |   ,   |   .   |   /   | SHIFT |
+            //                         |  ALT  | LOWER | SPACE |  n/a   |  |  n/a  | ENTER | RAISE |  WIN  |
             // Note: Silakka54 has 54 keys - the 4 positions marked n/a are not present (inner thumb + encoder positions)
 
             display-name = "Base";
@@ -33,11 +33,11 @@
 
         lower_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  DEL  |
-            // |       | F11 | F12 |      | BRI- | BRI+ |                   |      | MUTE  | VOL-  | VOL+ | PSCRN |       |
-            // |       |     |     |BTCLR |      |      |                   |      |  LFT  |  DWN  |  UP  |  RGT  |       |
-            // |       | BT0 | BT1 | BT2  | BT3  | BT4  |  n/a   |  |  n/a  |      | HOME  | PG_DN | PG_UP| END   |       |
-            //                     | GUI  |      | SPACE|  n/a   |  |  n/a  | ENTER|       |  ALT  |
+            // |       |  F1   |  F2   |  F3   |  F4   |  F5   |                   |  F6   |  F7   |  F8   |  F9   |  F10  |  DEL  |
+            // |       |  F11  |  F12  |       | BRI-  | BRI+  |                   |       | MUTE  | VOL-  | VOL+  | PSCRN |       |
+            // |       |       |       | BTCLR |       |       |                   |       |  LFT  |  DWN  |  UP   |  RGT  |       |
+            // |       |  BT0  |  BT1  |  BT2  |  BT3  |  BT4  |  n/a   |  |  n/a  |       | HOME  | PG_DN | PG_UP |  END  |       |
+            //                         |  GUI  |       | SPACE |  n/a   |  |  n/a  | ENTER |       |  ALT  |
 
             display-name = "Lower";
             bindings = <
@@ -51,11 +51,11 @@
 
         raise_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |  DEL  |
-            // |       |     |     |      |      |      |                   |      |       |       |      | PSCRN |   `   |
-            // |       |     |     |      |      |      |                   |      |   -   |   =   |  [   |   ]   |   ~   |
-            // |       |     |     |      |      |      |  n/a   |  |  n/a  |      |   _   |   +   |  {   |   }   |       |
-            //                     | GUI  |      | SPACE|  n/a   |  |  n/a  | ENTER|       |  ALT  |
+            // |       |       |       |       |       |       |                   |       |       |       |       |       |  DEL  |
+            // |       |       |       |       |       |       |                   |       |       |       |       | PSCRN |   `   |
+            // |       |       |       |       |       |       |                   |       |   -   |   =   |   [   |   ]   |   ~   |
+            // |       |       |       |       |       |       |  n/a   |  |  n/a  |       |   _   |   +   |   {   |   }   |       |
+            //                         |  GUI  |       | SPACE |  n/a   |  |  n/a  | ENTER |       |  ALT  |
 
             display-name = "Raise";
             bindings = <
